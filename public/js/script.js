@@ -1,4 +1,22 @@
 $(document).ready(function() {
+
+
+//     var player = videojs('my_player')
+// player.myModal.open() // paused, controls not show
+// player.play() // play
+// player.controls(true);
+
+// var player = videojs('my-video')
+// // here your code
+// $('#myModal').on('hidden.bs.modal', function () { player.pause(); })
+
+//     $('#myModal').on('shown.bs.modal', function () {
+//   $('#my-video')[0].play();
+// })
+// $('#myModal').on('hidden.bs.modal', function () {
+//   $('#my-video')[0].pause();
+// });
+
  
     // the below lines  of codes are for menu 
     $('#toggle').click(function() {
