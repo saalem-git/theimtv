@@ -1,51 +1,41 @@
 @extends('layout.master') @section('content')
 
-<div class="video-bg">
-    <a href="video">
-        <video class="main-video" src="assets/video-bg.mp4" autoplay="true" metadata muted="true" playsinline></video>
-        <div class="col-md-12 video-desc">
-            <div class="col-md-6 col-sm-6">
-                <h1>Mangrove.</h1>
-                <p>Together with Malaysian Nature Society (MNS) of Pahang , around 100 volunteers which comprised of our employees & their family members, MNS representatives and members of the community planted 1,500 mangrove saplings, cleaned the beach and released some baby turtles at Pantai Chendor, Cherating.</p>
-                <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
-                <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
-                <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
-                <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
-                <i class="fa fa-star fa-2x"></i>
-            </div>
-            <div class="col-md-6 col-sm-6"></div>
-        </div>
-    </a>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-    <!--Video pop up -->
-    <div class="play-icon">
-        <img src="assets/play-icon.png" data-toggle="modal" data-target="#homeVideo" class="img-responsive" onclick="playVid()">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="assets/homeposters/amukan.jpg" alt="" style="width:100%;">
+        <div class="play-icon">
+        <a href="video"><img src="assets/play-icon.png" class="img-responsive"></a>
     </div>
-    <div class="modal fade" id="homeVideo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="video-close-btn" data-dismiss="modal" onclick="pauseVid()"><span class="x">&times;</span></button>
-                <div class="">
+      </div>
 
-                    <video id="gossVideo" class="embed-responsive-item video-js video-modal" controls preload="video-js vjs-default-skin vjs-big-play-centered" poster="videos/poster.png" data-setup='{}'>
-                        <source src="videos/mystical.mp4" type='video/mp4'>
-                        <track kind="captions" src="videos/examples/shared/example-captions.vtt" srclang="en" label="English">
-                            <track kind="subtitles" src="videos/examples/shared/example-captions.vtt" srclang="en" label="English">
-                    </video>
-                </div>
-            </div>
-        </div>
+      <div class="item">
+        <img src="assets/homeposters/niah.jpg" alt="" style="width:100%;">
+        <div class="play-icon">
+        <a href="video"><img src="assets/play-icon.png" class="img-responsive"></a>
     </div>
+      </div>
+    
+      <div class="item">
+        <img src="assets/homeposters/hentian.jpg" alt="" style="width:100%;">
+        <div class="play-icon">
+        <a href="video"><img src="assets/play-icon.png" class="img-responsive"></a>
+    </div>
+      </div>
+    </div>
+  </div>
 
-</div>
 <div class="curve-lines">
     <img class="desk-line" src="assets/curved-desk.png">
     <img class="mob-line" src="assets/curved-mob.png">
 </div>
 
+
 <div class="categories">
     <div class="titles">
-        <h3>IM Originals</h3>
+        <h3 class="">IM Originals <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -114,7 +104,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Continue Watching</h3>
+        <h3>Continue Watching <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -168,7 +158,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Trending Now</h3>
+        <h3>Trending Now <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -279,7 +269,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Classics</h3>
+        <h3>Classics <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -330,7 +320,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Engaging</h3>
+        <h3>Engaging <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -543,7 +533,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Innovative</h3>
+        <h3>Innovative <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -588,7 +578,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Magical</h3>
+        <h3>Magical <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -678,7 +668,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Mesmerising</h3>
+        <h3>Mesmerising <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -801,7 +791,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Moments</h3>
+        <h3>Moments <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -1006,7 +996,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Mystical</h3>
+        <h3>Mystical <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -1067,7 +1057,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Spectacular</h3>
+        <h3>Spectacular <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -1172,7 +1162,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Splendour</h3>
+        <h3>Splendour <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -1208,7 +1198,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Trove</h3>
+        <h3>Trove <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -1268,7 +1258,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Enriching</h3>
+        <h3>Enriching <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -1301,7 +1291,7 @@
 
 <div class="categories">
     <div class="titles">
-        <h3>Inspiring</h3>
+        <h3>Inspiring <a href="" class="explore-all">Explore All</a> <span class="explore-arrow"> > </span></h3>
     </div>
 
     <section class="regular slider">
@@ -1337,15 +1327,5 @@
         </div>
     </section>
 </div>
-<script>
-    var vid = document.getElementById("gossVideo");
 
-    function playVid() {
-        vid.play();
-    }
-
-    function pauseVid() {
-        vid.pause();
-    }
-</script>
 @endsection

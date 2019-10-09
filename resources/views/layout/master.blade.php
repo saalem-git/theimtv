@@ -9,7 +9,7 @@
     @include('partials.menu')
     <!--     <div class="landingpage" id="landingpage">.</div>
  -->
- <div class"content">
+ <div class="content">
 
     @yield('content')
 

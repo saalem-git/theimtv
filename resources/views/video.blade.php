@@ -6,94 +6,9 @@
 </head>
 
 <body>
-  <div class="search-box">
-        <input class="search-txt" type="text" name=" " placeholder="Type to search"> </input>
-        <a href="#" class="search-btn">
-            <!--font-awesome-->
-            <i class="fa fa-search fa-2x"></i>
-        </a>
-    </div>
-    <div class="logo">
-        <a href="../"><img src="../assets/logo.png"></a>
-    </div>
-    <input id="burger" type="checkbox" />
+    @include('partials.menu')
 
-    <label class="burger-spans" for="burger">
-        <span class="first"></span>
-        <span class="second"></span>
-        <span class="third"></span>
-    </label>
-
-    <nav>
-        <div class="menu-details">
-            <div class="col-md-12 manage-details-bg">
-                <div class="col-md-8 edit-profile">
-                    <i class="fa fa-pencil fa-2x"></i>
-                    <span>Manage Profile</span>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="notification">
-                    <i class="fa fa-bell fa-2x"></i>
-                    <span>Notifications</span>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="vid-notif">
-                    <img src="../assets/menu-vid1.png">
-                </div>
-                <div class="txt-notif">
-                    <h3>Downloaded</h3>
-                    <h5>Your video is successfully downloaded. 12.03 PM</h5>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="vid-notif">
-                    <img src="../assets/menu-vid2.png">
-                </div>
-                <div class="txt-notif">
-                    <h3>New Arrival</h3>
-                    <h5>CiptaAsia Original : Hentian 10.35 AM</h5>
-                </div>
-            </div>
-
-            <div class="col-md-12 mylist-border">
-                <div class="my-list">
-                    <i class="fa fa-check fa-2x"></i>
-                    <span>My List</span>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="notification">
-                    <span>App Setting</span>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="notification">
-                    <span>Account</span>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="notification">
-                    <span>Help</span>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="notification">
-                    <span>Sign out</span>
-                </div>
-            </div>
-
-        </div>
-    </nav>
-
-        <div class="video-bg">
+    <div class="video-bg">
         <video class="main-video" src="videos/mystical.mp4" autoplay="true" metadata muted="true" playsinline></video>
 
         <div class="play-icon">
@@ -102,7 +17,7 @@
 
     </div>
 
-        <!--Video pop up -->
+    <!--Video pop up -->
     <div class="play-icon">
         <img src="assets/play-icon.png" data-toggle="modal" data-target="#homeVideo" class="img-responsive" onclick="playVid()">
     </div>
@@ -112,7 +27,7 @@
                 <button type="button" class="video-close-btn" data-dismiss="modal" onclick="pauseVid()"><span class="x">&times;</span></button>
                 <div class="">
 
-                    <video id="gossVideo" class="embed-responsive-item video-js video-modal" controls preload="video-js vjs-default-skin vjs-big-play-centered" poster="videos/poster.png" data-setup='{}'>
+                    <video id="gossVideo" class="embed-responsive-item video-js video-modal" controls preload="video-js vjs-default-skin vjs-big-play-centered" poster="" data-setup='{}'>
                         <source src="videos/mystical.mp4" type='video/mp4'>
                         <track kind="captions" src="videos/examples/shared/example-captions.vtt" srclang="en" label="English">
                             <track kind="subtitles" src="videos/examples/shared/example-captions.vtt" srclang="en" label="English">
@@ -122,8 +37,7 @@
         </div>
     </div>
 
-
-      <div class="curve-lines">
+    <div class="curve-lines">
         <img class="desk-line" src="../assets/curved-desk.png">
         <img class="mob-line" src="../assets/curved-mob.png">
     </div>
@@ -285,19 +199,18 @@
     </div>
     </section>
     <script>
-    var vid = document.getElementById("gossVideo");
+        var vid = document.getElementById("gossVideo");
 
-    function playVid() {
-        vid.play();
-    }
+        function playVid() {
+            vid.play();
+        }
 
-    function pauseVid() {
-        vid.pause();
-    }
-</script>
+        function pauseVid() {
+            vid.pause();
+        }
+    </script>
 
     @include('partials.scripts')
-
 
 </body>
 

@@ -1,34 +1,26 @@
 $(document).ready(function() {
+    $(".dropdown").hover(
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideDown("fast");
+            $(this).toggleClass('open');
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideUp("fast");
+            $(this).toggleClass('open');
+        }
+    );
 
+    $(document).scroll(function() {
+        var $nav = $(".navbar-default");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
 
-//     var player = videojs('my_player')
-// player.myModal.open() // paused, controls not show
-// player.play() // play
-// player.controls(true);
-
-// var player = videojs('my-video')
-// // here your code
-// $('#myModal').on('hidden.bs.modal', function () { player.pause(); })
-
-//     $('#myModal').on('shown.bs.modal', function () {
-//   $('#my-video')[0].play();
-// })
-// $('#myModal').on('hidden.bs.modal', function () {
-//   $('#my-video')[0].pause();
-// });
-
- 
     // the below lines  of codes are for menu 
     $('#toggle').click(function() {
         $(this).toggleClass('active');
         $('#overlay').toggleClass('open');
         $('#play-icon').toggleClass('hide');
     });
-
-    // // the below lines  of codes are for landing page to hide after few seconds 
-    // setTimeout(function() {
-    //     $('#landingpage').fadeOut('fast');
-    // }, 3000);
 
     // the below lines  of codes are for 
     $('#video-click').click(function() {
