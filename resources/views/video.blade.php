@@ -49,18 +49,18 @@
             <span class="duration">90 Minute</span>
             <span class="category">Documentary</span>
         </div>
-        <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
+        {{-- <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
         <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
         <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
         <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
         <i class="fa fa-star fa-2x rating-border"></i>
-        <span class="movie-episode">PG13</span>
+        <span class="movie-episode">PG13</span> --}}
     </div>
     <div class="col-md-12 col-sm-12 movie-summary">
         <h1 class="summary">Summary</h1>
         <p>Together with Malaysian Nature Society (MNS) of Pahang , around 100 volunteers which comprised of our employees & their family members, MNS representatives and members of the community planted 1,500 mangrove saplings, cleaned the beach and released some baby turtles at Pantai Chendor, Cherating.</p>
         <div class="col-md-12 summary-icons">
-            <div class="col-md-3 col-sm-3">
+            {{-- <div class="col-md-3 col-sm-3">
                 <i class="fa fa-plus"></i>
                 <h4>My List</h4>
             </div>
@@ -75,7 +75,7 @@
             <div class="col-md-3 col-sm-3">
                 <i class="fa fa-download"></i>
                 <h4>Download</h4>
-            </div>
+            </div> --}}
         </div>
     </div>
 
