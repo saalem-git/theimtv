@@ -17,10 +17,14 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/signup', function () {
-    return view('signup');
+Route::get('/register', function () {
+    return view('register');
 });
 
 Route::get('/video', function () {
     return view('video');
+});
+
+Route::get('/categories', function () {
+    return view('categories');
 });
