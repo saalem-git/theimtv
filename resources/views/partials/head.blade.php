@@ -1,4 +1,6 @@
-<title>Insight Malaysia</title>
+    <title>theimtv</title>
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

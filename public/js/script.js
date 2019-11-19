@@ -28,14 +28,10 @@ $(document).ready(function() {
     });
 
     // the below lines are for showing password if eye icon is clicked 
-    $(".toggle-password").click(function() {
-        $(this).toggleClass("fa-eye fa-eye-slash");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") == "password") {
-            input.attr("type", "text");
-        } else {
-            input.attr("type", "password");
-        }
-    });
+    $('.field-icon').hover(function () {
+        $('.signin-pass').attr('type', 'text'); 
+     }, function () {
+        $('.signin-pass').attr('type', 'password'); 
+     });
 
 });

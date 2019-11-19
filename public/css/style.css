@@ -22,11 +22,28 @@
     font-family: MyriadProRegular;
     src: url("MyriadProRegular.otf");
 }
+html {
+    height: 100%;
+}
 body {
     background: #efefef;
     font-family: FuturaNewBook !important;
+    min-height: 100%;
+    position: relative;
 }
-.landingpage {
+
+.container {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+.container:before,
+.container:after {
+    clear: none !important;
+}
+/* .landingpage {
     background-image: url('../assets/landingpage.png');
     position: fixed;
     height: 100vh;
@@ -125,7 +142,9 @@ body input:checked~nav>div {
 .manage-details-bg {
     background: rgba(0, 0, 0, 0.09);
     padding: 7% 0 2% 0 
-}
+} */
+
+
 /* Video Modal */
 .video-close-btn {
     background: none;
@@ -139,6 +158,7 @@ body input:checked~nav>div {
     z-index: 9999;
 }
 .modal-body {
+    display: flex !important;
     padding: 0px !important;
 }
 .video-modal {
@@ -192,6 +212,10 @@ body input:checked~nav>div {
 .navbar-collapse {
     padding: 0px !important;
 }
+.profile-icon {
+    font-size: 24px !important;
+    color: white;
+}
 .navbar-toggle {
     margin-right: 20px !important;
 }
@@ -212,8 +236,9 @@ body input:checked~nav>div {
     margin: 0px !important;
     height: 70px !important;
 }
-.navbar-default .container {
+.navbar-default .menu-container {
     height: 70px;
+    margin: auto;
     padding: 0px !important;
     width: 90% !important;
 }
@@ -223,7 +248,7 @@ body input:checked~nav>div {
     font-size: 16px;
     font-family: FuturaNewBold;
     font-weight: bold;
-    padding: 10px 25px !important;
+    padding: 7px 20px !important;
 }
 .navbar-default .navbar-nav>li>a:hover {
     color: #f2bc44 !important;
@@ -352,6 +377,7 @@ body input:checked~nav>div {
     padding: 2px 25px !important;
 }
 /* End of Menu */
+
 /* Login Modal */
 .login-modal {
     width: 975px !important;
@@ -361,19 +387,23 @@ body input:checked~nav>div {
 .modal-body {
     display: table;
 }
+.modal-content {
+    border: 0px !important;
+}
 .login-sec {
     background: black;
     color: white;
+    flex: 1;
     padding: 50px !important;
 }
-.username-sec, .password-sec {
+.name-sec, .username-sec, .password-sec {
     background: white;
     color: black;
     border-radius: 5px;
     margin: 20px 0 !important;
     padding: 10px !important;
 }
-.username-sec p, .password-sec p {
+.name-sec p, .username-sec p, .password-sec p {
     color: black;
     font-family: FuturaNewBook;
     font-size: 14px;
@@ -381,7 +411,11 @@ body input:checked~nav>div {
 .registration-sec {
     background: white;
     color: black;
+    flex: 1;
     padding: 50px !important;
+}
+.register-btn {
+    margin-top: 100px;
 }
 .registration-title {
     color: black;
@@ -389,27 +423,38 @@ body input:checked~nav>div {
     font-size: 53px;
     line-height: 1;
 }
-.registration-desc {
+.registration-desc,
+.verification-thanks,
+.verification-desc {
     color: #808080;
     font-family: FuturaNewMedium;
     font-size: 21px;
 }
-.form-control {
+.signin-email,
+.signin-pass,
+.signin-name {
     background: transparent;
     border: 0 !important;
     padding: 0 !important;
     box-shadow: none !important;
 }
 .toggle-password {
+    cursor: pointer;
     float: right;
     margin-top: -25px;
 }
-::placeholder, .form-control {
+::placeholder, .form-control,
+.form-group label {
     color: black !important;
     font-family: FuturaNewBold;
     font-size: 14px;
 }
-.login, .register {
+::placeholder, fieldset .form-control {
+    color: black !important;
+    font-family: FuturaNewBook;
+    font-style: italic;
+}
+.login, .register, .back-home {
     width: 100%;
     outline: none;
     border: 0px;
@@ -423,7 +468,8 @@ body input:checked~nav>div {
     background: #f2bc44;
     color: black;
 }
-.register {
+.register,
+.back-home {
     background: black;
     color: #f2bc44;
 }
@@ -564,8 +610,8 @@ body input:checked~nav>div {
     border: 1px solid yellow;
 }
 .footer {
-    padding: 3% 5% !important;
     background: black;
+    padding: 3% 5% !important;
 }
 .footer-icons {
     color: white;
@@ -575,7 +621,7 @@ body input:checked~nav>div {
 .footer li {
     list-style: none 
 }
-.footer li a, p {
+.footer li a, .all-rights {
     color: white;
     font-family: MyriadProRegular;
 }
@@ -611,10 +657,13 @@ body input:checked~nav>div {
     font-size: 62px;
     color: black;
 }
-.date-time {
-    margin-bottom: 3%;
+.date-time,
+.cast-director {
+    margin-bottom: 2%;
 }
-.date-time .date {
+.date-time .date,
+.cast,
+.director {
     color: #666666;
     font-family: FuturaNewDemi;
     font-size: 21px;
@@ -669,6 +718,7 @@ body input:checked~nav>div {
     color: #666666;
 }
 /* End of Video Pages */
+
 /* Slick Slider */
 .slider {
     width: 90%;
@@ -713,6 +763,33 @@ body input:checked~nav>div {
     -webkit-transform: scale(0.9);
     -moz-transform: scale(0.9);
 }
+/* End of Slick Slider */
+
+/* Registratio Page */
+.registration-form {
+    width: 90%;
+    margin: auto;
+    margin-top: 111px;
+}
+.register-title {
+    color: black;
+    font-family: FuturaNewBold !important;
+    font-size: 21px;
+    margin: 0;
+    padding-bottom: 15px;
+}
+.registration-form .name-sec, 
+.registration-form .username-sec, 
+.registration-form .password-sec {
+    border: 1px solid #606060;
+}
+.verification {
+    margin-top: 150px;
+    text-align: center;
+}
+/* End of Registration Page */
+
+
 @media only screen and (max-device-width: 1024px) {
     .mob-line {
         display: unset 
@@ -737,17 +814,36 @@ body input:checked~nav>div {
         margin: 0px 20px;
    }
 }
+
+@media only screen and (max-device-width: 768px) {
+    .login-modal {
+        width: 100% !important;
+    }
+    .modal-header .close {
+        color: black !important;
+    }
+    .modal-body {
+        display: unset !important;
+    }
+    .register-btn {
+        margin-top: 0px;
+    }
+}
+
 @media only screen and (max-device-width: 480px) {
     .dropdown-menu {
         margin: 0px !important;
    }
+   .login-modal {
+    top: 0 !important;
+}
     .dropdown-arrow {
         display: none;
    }
     .dropdown-menu li {
         text-align: center;
    }
-   .navbar .container {
+   .navbar .menu-menu-container {
         width: 100% !important;
         padding: 0px !important;
    }

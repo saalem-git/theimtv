@@ -28,3 +28,11 @@ Route::get('/video', function () {
 Route::get('/categories', function () {
     return view('categories');
 });
+
+Route::get('/confirm-email', function () {
+    return view('confirm-email');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});

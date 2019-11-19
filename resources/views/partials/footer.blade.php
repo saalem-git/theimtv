@@ -32,6 +32,6 @@
         <div class="col-md-12 copyright">
             <h4>A Collaborative Effort with</h4>
             <img class="rtm" src="assets/rtm-finas.png">
-            <p>© 2019 Insight Malaysia, All Right Reserved</p>
+            <p class="all-rights">© 2019 Insight Malaysia, All Right Reserved</p>
         </div>
     </div>

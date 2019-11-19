@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default" role="navigation">
-  <div class="container">
+  <div class="menu-container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-slide-dropdown">
@@ -35,12 +35,20 @@
           <li>
             <form class="navbar-form navbar-left" role="search">
               <div class="search-box">
-                <input class="search-txt" type="text" name=" " placeholder="Type to search"></input>
+                <input class="search-txt" type="text" name=" " placeholder="Type to search">
                 <a href="#" class="search-btn">
                   <i class="fa fa-search fa-2x"></i>
                 </a>
               </div>
             </form>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle profile-icon"></i> <span class="caret"></span></a>               
+              <ul class="dropdown-menu" role="menu">
+                <div class=""></div>
+                <li><a href="#">View Profile</a></li>
+                <li><a href="#">Sign Out</a></li>
+              </ul>                
           </li>
           <li>
             <!-- Trigger the modal with a button -->
@@ -64,28 +72,28 @@
         <div class="modal-body">
           <div class="col-md-6 col-sm-12 registration-sec">
             <p class="registration-title">I’m anywhere, anytime</p>
-            <p class="registration-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
-            <div class="">
-                <a href="dashboard.php">
+            <p class="registration-desc">Watch anywhere, anytime, on an unlimited number of devices.</p>
+            <div class="register-btn">
+                <a href="register">
                     <button class="register">Register</button>
                 </a>
               </div>
             </div>
           <div class="col-md-6 col-sm-12 login-sec">
-                          <div class="login-form">
+                <div class="login-form">
                     <form class="form-horizontal" method="" action="">
                         <p class="signin-title">Sign In</p>
                         <div class="form-group username-sec">
                             <div class="">
                                 <p>Email</p>
-                                <input type="email" placeholder="example@example.com" class="form-control" name="email" value="">
+                                <input type="email" placeholder="example@example.com" class="form-control signin-email" name="email" value="">
                             </div>
                         </div>
                         <div class="form-group password-sec">
                             <p>Password</p>
                             <div class="">
-                                <input id="password-field" placeholder="**********" type="password" class="form-control" name="password">
-                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                <input id="password-field" placeholder="**********" type="password" class="form-control signin-pass" name="password">
+                                <span class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
                         </div>
 
